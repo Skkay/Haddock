@@ -23,7 +23,7 @@
 
     <div class="container">
         <div class="jumbotron">
-            <h5>Clique sur un album pour voir ces jurons! <a href="tous-les-jurons.php">Ou clique ici pour avoir la liste de tous les jurons du Capitaine Haddock.</a></h5>
+            <h5>Clique sur un album pour voir ces jurons ! <a href="tous-les-jurons.php">Ou clique ici pour avoir la liste de tous les jurons du Capitaine Haddock.</a></h5>
             <div class="card-columns">
                 <?php
                     $bdd_albums = $bdd->query("
