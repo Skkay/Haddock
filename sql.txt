@@ -1,0 +1,46 @@
+390
+407
+
+<div class="card">
+    <img src="..." class="card-img-top" alt="...">
+  </div>
+
+245 
+342
+
+SELECT jurons.jurons_texte FROM jurons, se_trouver_bulle, album WHERE jurons.jurons_num = se_trouver_bulle.jurons_num AND se_trouver_bulle.ref_album LIKE "EMY";
+
+SELECT jurons.jurons_texte FROM jurons, se_trouver_bulle, album WHERE jurons.jurons_num = se_trouver_bulle.jurons_num AND se_trouver_bulle.ref_album LIKE album.album_ref AND album.album_image LIKE "Tintin_10";
+
+SELECT jurons.jurons_texte, se_trouver_bulle.num_page FROM jurons, se_trouver_bulle, album WHERE jurons.jurons_num = se_trouver_bulle.jurons_num AND se_trouver_bulle.ref_album LIKE album.album_ref AND album.album_image LIKE "Tintin_10";
+
+SELECT jurons.jurons_texte, se_trouver_bulle.num_case, se_trouver_bulle.place_bande, se_trouver_bulle.num_page, se_trouver_bulle.ref_album
+FROM jurons, se_trouver_bulle
+WHERE jurons.jurons_num = se_trouver_bulle.jurons_num
+;
+
+
+SELECT jurons.jurons_texte, se_trouver_bulle.num_case, se_trouver_bulle.place_bande, se_trouver_bulle.num_page, se_trouver_bulle.ref_album, album.album_titre
+FROM jurons, se_trouver_bulle, album
+WHERE jurons.jurons_num = se_trouver_bulle.jurons_num
+AND se_trouver_bulle.ref_album LIKE album.album_ref
+;
+
+
+SELECT jurons.jurons_texte, jurons.jurons_num, se_trouver_bulle.num_case, se_trouver_bulle.place_bande, se_trouver_bulle.num_page, se_trouver_bulle.ref_album, album.album_titre
+FROM jurons, se_trouver_bulle, album
+WHERE jurons.jurons_num = 1
+AND se_trouver_bulle.num_case = 1
+AND se_trouver_bulle.place_bande LIKE "A"
+AND se_trouver_bulle.num_page = 30
+AND se_trouver_bulle.ref_album LIKE "EMY"
+AND jurons.jurons_num = se_trouver_bulle.jurons_num
+AND album.album_ref = se_trouver_bulle.ref_album
+
+
+DELETE
+FROM se_trouver_bulle
+WHERE se_trouver_bulle.num_case = 1
+AND se_trouver_bulle.place_bande LIKE "A"
+AND se_trouver_bulle.num_page = 30
+AND se_trouver_bulle.ref_album LIKE "EMY"
