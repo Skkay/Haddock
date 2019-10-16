@@ -5,6 +5,7 @@
             <img src="/Haddock/assets/ressources/images/logo2.png" width="25%" height="25%" class="d-inline-block" alt="">
             <span class="">LesMotsTordus</span>
         </a>
+        <form><input class="btn btn-outline-primary" type="button" value="Jeux" onclick="window.location.href='/Haddock/jeux'" /></form>
         <form><input class="btn btn-outline-primary" type="button" value="Accueil" onclick="window.location.href='/Haddock/'" /></form>
     </div>
 </nav>
