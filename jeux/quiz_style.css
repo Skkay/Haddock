@@ -1,9 +1,19 @@
-.quiz_reponse {
+.quiz_resultat {
 	font-family: 'Francois One', sans-serif;
 	color: #484746;
 	font-size: 100px;
 }
-
 .quiz_label {
 	font-size: 40px;
+}
+
+
+.quiz_bonne_rep {
+	color: #66A628;
+}
+.quiz_mauvaise_rep {
+	color: #C52828;
+}
+.quiz_question {
+	font-weight: bold;
 }
