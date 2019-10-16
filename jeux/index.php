@@ -24,7 +24,10 @@
     <div class="container">
         <div class="jumbotron">
             <h1>Jeux</h1>
-            
+            <hr class="my-4">
+            <ul>
+                <li><a href="quiz.php">Quiz</a></li>
+            </ul>
         </div>
     </div>
     <script src="../assets/js/jquery.min.js"></script>
